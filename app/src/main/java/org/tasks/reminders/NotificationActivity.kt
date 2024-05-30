@@ -28,6 +28,11 @@ class NotificationActivity : AppCompatActivity(), NotificationDialog.Notificatio
         themeAccent.applyStyle(theme)
         val intent = intent
         taskId = intent.getLongExtra(EXTRA_TASK_ID, 0L)
+
+        //MARK: Launch the edit action right away and skip the useless dialog
+        this.edit()
+        return
+        
         val fragmentManager = supportFragmentManager
         var fragment = fragmentManager.findFragmentByTag(FRAG_TAG_NOTIFICATION_FRAGMENT) as NotificationDialog?
         if (fragment == null) {
