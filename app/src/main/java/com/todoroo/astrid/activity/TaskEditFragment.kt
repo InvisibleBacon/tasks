@@ -265,7 +265,7 @@ class TaskEditFragment : Fragment(), Toolbar.OnMenuItemClickListener {
         }
         if (!model.isNew) {
             lifecycleScope.launch {
-                notificationManager.cancel(model.id)
+                //notificationManager.cancel(model.id)
             }
             if (preferences.linkify) {
                 linkify.linkify(title)

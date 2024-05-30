@@ -46,7 +46,7 @@ class NotificationActivity : AppCompatActivity(), NotificationDialog.Notificatio
 
     override fun edit() {
         lifecycleScope.launch {
-            notificationManager.cancel(taskId)
+            //notificationManager.cancel(taskId)
             taskDao.fetch(taskId)
                     ?.let {
                         startActivity(
