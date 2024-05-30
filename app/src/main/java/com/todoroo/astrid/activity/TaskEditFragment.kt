@@ -66,7 +66,7 @@ class TaskEditFragment : Fragment() {
             val viewState = editViewModel.viewState.collectAsStateWithLifecycle().value
             LaunchedEffect(viewState.isNew) {
                 if (!viewState.isNew) {
-                    notificationManager.cancel(viewState.task.id)
+                    //notificationManager.cancel(viewState.task.id)
                 }
             }
             val context = LocalContext.current
