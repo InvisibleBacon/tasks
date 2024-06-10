@@ -77,7 +77,7 @@ data class Alarm(
                 task = task,
                 time = TimeUnit.DAYS.toMillis(1),
                 type = TYPE_REL_END,
-                repeat = 6,
+                repeat = 3650, //Updated by mark :)
                 interval = TimeUnit.DAYS.toMillis(1)
             )
     }
